@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: d7-d01
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  sources:
+  - repoURL: https://github.com/naivary/d7-d00.git
+    targetRevision: HEAD
+    path: apps/d00
+  syncPolicy:
+    automated: {}

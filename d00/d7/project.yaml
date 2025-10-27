@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: d7-d00
+  namespace: argocd
+spec:
+  destinations:
+  - namespace: "d7-d*"
+    server: "*"
+  sourceRepos:
+  - "*"

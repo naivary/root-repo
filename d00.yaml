@@ -1,17 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team-1
+  name: d00
   namespace: argocd
 spec:
-  syncPolicy:
-    automated:
-      enabled: true
+  project: default
   destination:
     server: https://kubernetes.default.svc
-    namespace: gitlab
-  project: default
+    namespace: argocd
   sources:
-  - repoURL: https://github.com/naivary/team-1.git
+  - repoURL: https://github.com/naivary/root-repo.git 
     targetRevision: HEAD
-    path: apps
+    path: d00
+  syncPolicy:
+    automated: {}
