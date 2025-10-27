@@ -4,8 +4,9 @@ metadata:
   name: d7-d00
   namespace: argocd
 spec:
+  description: "Project that only allows deployments into namespaces starting with d7-d"
+  # Allow apps to deploy only to the cluster Argo CD is connected to,
+  # and only into namespaces that match the pattern d7-d*
   destinations:
-  - namespace: 'd7-d*'
-    server: '*'
-  sourceRepos:
-  - '*'
+  - namespace: "d7-d.*"
+    server: "https://kubernetes.default.svc"
