@@ -10,3 +10,9 @@ spec:
     server: "*"
   sourceRepos:
   - "*"
+  namespaceResourceWhitelist:
+  - group: "*"
+    kind: "*"
+  clusterResourceWhitelist:
+  - group: ""
+    kind: Namespace
