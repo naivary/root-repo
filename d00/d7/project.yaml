@@ -10,3 +10,5 @@ spec:
   destinations:
   - namespace: "d7-d.*"
     server: "https://kubernetes.default.svc"
+  sourceRepos:
+  - "*"
