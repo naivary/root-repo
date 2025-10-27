@@ -12,5 +12,7 @@ spec:
   - repoURL: https://github.com/naivary/root-repo.git 
     targetRevision: HEAD
     path: d00
+    directory:
+      recurse: true
   syncPolicy:
     automated: {}
